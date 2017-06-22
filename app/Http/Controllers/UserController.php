@@ -40,7 +40,7 @@ class UserController extends BaseController
             if ($validator->fails()) {
                 $output['success'] = false;
                 $output['message'] = $validator->getMessageBag()->toArray();
-                return json_encode($$output);
+                return json_encode($output);
             } else {
                 $credentials = ['login_id' => $email, 'password' => $password];
 

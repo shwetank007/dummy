@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     protected $table = "user";
+
     use Notifiable;
 
     /**
@@ -16,7 +17,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'login_id', 'password', 'firstname', 'middlename', 'lastname', 'fullname', 'active', 'token', 'firebase_reg_id',
+        'token_used', 'password_locked', 'passwd_update_date', 'password_reset_token', 'device_id'
     ];
 
     /**
@@ -25,6 +27,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password'
     ];
 }
