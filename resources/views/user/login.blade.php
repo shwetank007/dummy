@@ -72,8 +72,8 @@ $(document).ready(function() {
 				$('#loginBtn').attr('disabled', 'disabled');
 			},
 			success: function (data) {
-				var obj = JSON.parse(data);
-				console.log(obj);
+
+				window.location = "{{ route('dashboard') }}";
 			},
 			error: function (xhr, textStatus, thrownError) {
                 alert('Something went wrong. Please try again!');

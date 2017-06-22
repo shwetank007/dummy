@@ -5,5 +5,6 @@
 </head>
 <body>
 Hi!!!
+<a href="{{ route('logout') }}">Logout</a>
 </body>
 </html>
